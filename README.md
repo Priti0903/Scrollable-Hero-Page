@@ -1,5 +1,11 @@
 # Scroll-Driven Hero Section Animation
 
+## 🔗 Live Demo
+
+https://scrollable-hero-page-git-main-priti-vishwakarmas-projects.vercel.app/
+
+---
+
 ## Overview
 
 This project implements a premium scroll-driven hero section using Next.js, Tailwind CSS, and GSAP (ScrollTrigger).
@@ -16,23 +22,23 @@ with animated impact statistics below it.
 
 - Fullscreen hero section (above the fold)
 - Letter-spaced headline: WELCOME ITZFIZZ
-- Staggered letter reveal animation on load
+- Staggered letter reveal animation
 - Alternating bounce effect on letters
 - Gradient rectangle panel positioned behind the headline
 - Scroll-driven animation (scrub-based, not time-based)
 - Pinned cinematic scroll section
-- 3D rotation effects (desktop)
-- Responsive behavior for desktop and mobile
-- Performance-optimized (transform-only animations)
+- 3D rotation effects
+- Fully responsive (desktop + mobile)
+- Performance-optimized (transform-based animations)
 
 ---
 
 ## Tech Stack
 
-- Next.js
-- Tailwind CSS
-- GSAP 3
-- ScrollTrigger
+- Next.js  
+- Tailwind CSS  
+- GSAP 3  
+- ScrollTrigger  
 
 ---
 
@@ -49,18 +55,6 @@ npm run dev
 Open in browser:
 
 http://localhost:3000
-
----
-
-## Project Structure
-
-app/
-  layout.js
-  page.js
-  globals.css
-
-components/
-  Hero.js
 
 ---
 
