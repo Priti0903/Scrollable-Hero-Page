@@ -1,0 +1,25 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  background: radial-gradient(circle at 20% 30%, #0f172a, #000 60%);
+  color: white;
+}
+
+
+.mesh-bg {
+  background: radial-gradient(circle at 30% 30%, #7c3aed, transparent 40%),
+              radial-gradient(circle at 70% 60%, #06b6d4, transparent 40%),
+              radial-gradient(circle at 50% 80%, #ec4899, transparent 40%);
+  animation: moveMesh 15s ease infinite alternate;
+  filter: blur(80px);
+  opacity: 0.5;
+}
+
+@keyframes moveMesh {
+  0% { transform: translateY(0px) scale(1); }
+  100% { transform: translateY(-50px) scale(1.1); }
+}
