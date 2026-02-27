@@ -32,7 +32,6 @@ export default function Hero() {
           }
         })
 
-        // Initial Reveal
         tl.from('.letter', {
           y: isMobile ? 80 : 150,
           opacity: 0,
@@ -48,7 +47,6 @@ export default function Hero() {
           duration: 1
         }, "-=0.8")
 
-        // Rectangle Rise
         tl.fromTo(panelRef.current,
           {
             y: 200,
@@ -65,7 +63,7 @@ export default function Hero() {
           }
         )
 
-        // Rotate only on desktop
+        
         if (!isMobile) {
           tl.to(panelRef.current, {
             rotateY: 360,
@@ -73,13 +71,13 @@ export default function Hero() {
           })
         }
 
-        // Subtle float
+        
         tl.to(panelRef.current, {
           y: -20,
           duration: 2
         })
 
-        // Alternating bounce (lighter on mobile)
+       
         gsap.utils.toArray('.letter').forEach((el, i) => {
           gsap.to(el, {
             y: i % 2 === 0 ? (isMobile ? -8 : -15) : (isMobile ? 8 : 15),
@@ -106,10 +104,10 @@ export default function Hero() {
       className="h-screen relative flex flex-col justify-center items-center overflow-hidden"
     >
 
-      {/* Background */}
+     
       <div className="absolute inset-0 mesh-bg"></div>
 
-      {/* Text + Panel */}
+     
       <div className="relative flex flex-col items-center justify-center">
 
         <div
@@ -139,7 +137,7 @@ export default function Hero() {
 
       </div>
 
-      {/* Stats */}
+     
       <div className="flex gap-6 md:gap-12 mt-8 md:mt-12 z-20 text-sm md:text-base">
         <div className="stat text-center">
           <h2 className="text-xl md:text-3xl font-bold">98%</h2>
