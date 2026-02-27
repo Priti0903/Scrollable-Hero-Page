@@ -33,7 +33,7 @@ export default function Hero() {
         })
 
         tl.from('.letter', {
-          y: isMobile ? 80 : 150,
+          y: isMobile ? 60 : 120,
           opacity: 0,
           stagger: 0.05,
           duration: 1.2,
@@ -52,7 +52,7 @@ export default function Hero() {
             y: 200,
             scale: isMobile ? 0.9 : 0.7,
             opacity: 0,
-            rotateX: isMobile ? 0 : 45
+            rotateX: isMobile ? 0 : 40
           },
           {
             y: 0,
@@ -63,7 +63,6 @@ export default function Hero() {
           }
         )
 
-        
         if (!isMobile) {
           tl.to(panelRef.current, {
             rotateY: 360,
@@ -71,21 +70,19 @@ export default function Hero() {
           })
         }
 
-        
         tl.to(panelRef.current, {
           y: -20,
           duration: 2
         })
 
-       
         gsap.utils.toArray('.letter').forEach((el, i) => {
           gsap.to(el, {
-            y: i % 2 === 0 ? (isMobile ? -8 : -15) : (isMobile ? 8 : 15),
-            duration: 1.2,
+            y: i % 2 === 0 ? -6 : 6,
+            duration: 1.8,
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut",
-            delay: i * 0.05
+            delay: i * 0.08
           })
         })
 
@@ -103,11 +100,8 @@ export default function Hero() {
       ref={sectionRef}
       className="h-screen relative flex flex-col justify-center items-center overflow-hidden"
     >
-
-     
       <div className="absolute inset-0 mesh-bg"></div>
 
-     
       <div className="relative flex flex-col items-center justify-center">
 
         <div
@@ -137,8 +131,7 @@ export default function Hero() {
 
       </div>
 
-     
-      <div className="flex gap-6 md:gap-12 mt-8 md:mt-12 z-20 text-sm md:text-base">
+      <div className="flex gap-6 md:gap-12 mt-16 md:mt-20 z-20 text-sm md:text-base">
         <div className="stat text-center">
           <h2 className="text-xl md:text-3xl font-bold">98%</h2>
           <p>Client Satisfaction</p>
